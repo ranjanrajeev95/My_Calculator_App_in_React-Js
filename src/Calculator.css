@@ -1,0 +1,156 @@
+.Calculator{
+  width: 400px;
+  height: 610px;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  justify-content: space-between;
+}
+button{
+  transform: translateZ(15px);
+  background-color: whitesmoke;
+  box-shadow: rgba(187, 187, 187, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  margin: 1px;
+  border: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+button:hover{
+  filter: brightness(95%);
+  transform: translateZ(17px);
+}
+button:active{
+  transform: translateZ(5px);
+}
+
+.Display{
+  padding: 20px;
+  font-size: xx-large;
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 150px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 5px;
+}
+.Display h1{
+  position: absolute;
+  top: 20px;
+  width: 90%;
+  height: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-align: right;
+  transform: translateZ(30px);
+}
+.Display h1:nth-child(2){
+  position: absolute;
+  top: 15px;
+  color: transparent;
+  transform: translateZ(0px);
+  text-shadow: 0 0 3px rgba(0,0,0,0.8)
+}
+.Display h6{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-size: 0.5em;
+  text-align: right;
+  width: 100%;
+  transform: translateZ(30px);
+  /* background-color: blue; */
+}
+#miniDisp2{
+  bottom: 3px;
+  right: -1px;
+  transform: translateZ(0px);
+  color: transparent;
+  text-shadow: 0 0 3px rgba(0,0,0,0.8)
+}
+
+.Keypad{
+  background-color: whitesmoke;
+  height: 445px;
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.ResetKey{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(25% - 2px);
+  height: calc(20% - 2px);
+  filter: brightness(90%);
+}
+.ClearKey{
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: calc(25% - 2px);
+  height: calc(20% - 2px);
+  filter: brightness(90%);
+}
+.OperatorKeys{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.PercentageKey{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(25% - 2px);
+  height: calc(20% - 2px);
+  filter: brightness(90%);
+}
+.OperatorKeys button{
+  height: calc(25% - 2px);
+  background-color: rgb(193, 218, 143);
+}
+
+.CalcKey{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: calc(25% - 2px);
+  height: calc(20% - 2px);
+  filter: brightness(90%);
+}
+.DecimalKey{
+  position: absolute;
+  bottom: 0;
+  right: 25%;
+  width: calc(25% - 2px);
+  height: calc(20% - 2px);
+  z-index: 10;
+}
+.DigitKeys{
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 75%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.DigitKeys button{
+  width: calc(33.3333333333333333333333333333333333% - 2px);
+  height: calc(25% - 2px);
+}
+.DigitKeys button:nth-child(10){
+  width: calc(66.6666666666666666666666666666666666% - 2px);
+}
